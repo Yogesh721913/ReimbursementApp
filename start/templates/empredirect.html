@@ -1,0 +1,36 @@
+<!--<!DOCTYPE html>
+<html>
+<head>
+<title></title>
+</head>
+<body>
+
+<button type="submit"><a href="{% url 'Requestform' %}">Create Request</a></button>
+<button type="submit"><a href="showpastreq/{{nam}}">Status of past request</a></button>
+
+</body>
+</html>-->
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    
+  </head>
+  <body class="bg-light">
+    
+
+<div class="container-fluid ml-5">
+<button type="submit" class="btn btn-primary"><a  class="text-white"  href="{% url 'Requestform' %}">Create Request</a></button>
+<button type="submit" class="btn btn-warning"><a class="text-white" href="showpastreq/{{nam}}">Status of past request</a></button>
+</div>
+
+  </body>
+</html>

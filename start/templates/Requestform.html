@@ -1,0 +1,88 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Reimbursement Application</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+       <style>
+       
+       .border{
+             border:5px solid gray;
+             margin-right:695px;
+             margin-top:40px;
+              margin-left:520px;
+              padding-top:40px;
+              padding-bottom:40px;
+              padding-left:200px;
+             
+
+
+            }
+            .hed{
+                color:green;
+                margin-left:630px;
+              
+            }
+       
+          .sub{
+
+            margin-left:60px;
+             background:yellow;
+          }
+          .type{
+              background:Azure;
+          }
+          .mess{
+              font-size:25px;
+              color:blue;
+              margin-left:695px;
+          }
+         
+       </style>
+
+    </head>
+    <body bgcolor="powderblue">
+   
+     
+    <h1 class="hed">Expense Reimbursement Form</h1>
+    <hr>
+     <p class="mess">
+     {%for message in messages%}
+     {{message}}
+     {%endfor%}</p>
+    <div class="border">
+    <form action=" " method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+       
+       Employee Name:<br>
+       <input type="text" name="Name" required placeholder="Enter name" class="type">
+       <br><br>
+       Employee Id:<br>
+       <input type="email" name="email" required placeholder="e.g xyz@gmail.com"  class="type"><br><br>
+        Employee Designation:<br><input type="text" name="deg" required  class="type" maxlenght="100"><br><br>
+        Date<br><input type="date" name="date" required><br><br>
+         Type of Reimbursement:<br><select  name="drop" required  class="type">
+         <option selected value="select Here">select Here</option>
+        <option value="Food">Food</option>
+        <option value="Travelling">Travelling</option>
+        <option value="Medical">Medical</option>
+        <option value="Internet">Internet</option>
+        <option value="Other">Other</option>
+        
+        </select><br><br>
+          Description:<br><textarea name="des" required rows="8" cols="40" placeholder="start writing here"  class="type"></textarea><br><br>
+        Expense Ammount :<br><input type="number" name="exp" required placeholder="In Rs"  class="type"><br><br>
+       
+        Upload Bill:<br><input type="file" name="file" required  class="type"><br><br>
+        
+      
+          <br><br>
+
+      <input type="submit" class="sub">
+     
+       </form>
+       </div>
+    </body>
+</html> 
